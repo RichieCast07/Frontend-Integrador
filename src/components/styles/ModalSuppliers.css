@@ -15,8 +15,8 @@
     background: white;
     padding: 10px;
     border-radius: 20px;
-    height: 550px;
-    width: 700px;
+    height: 450px;
+    width: 400px;
     max-width: 100%;
 }
 
@@ -43,7 +43,7 @@
 .close-btn i {
     font-size: 32px;
     color: #b30000;
-    margin-top: -20px;
+    margin-top: -50px;
 }
 
 .modal-body {
@@ -60,8 +60,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 200px;
+    width: 150px;
+    height: 50px;
     background-color: #ffcccc;
     border-radius: 8px;
     margin-right: 20px;
@@ -119,6 +119,26 @@
     margin-left: 2%;
 }
 
+.label-email {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-left: 2%;
+}
+
+.label-phone-number {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-left: 2%;
+}
+
 .form-fields .input {
     width: 100%;
     padding: 10px;
@@ -127,29 +147,19 @@
     border-radius: 4px;
     position: relative;
 }
-
-.form-fields .nombre-input {
-    margin-left: 5px;
-    width: 94%;
+.form-fields .name-input {
+    width: 90%;
     border-radius: 10px;
 }
 
-.form-fields .cantidad-input {
-    width: 85%;
-    border-radius: 10px;
-}
-.form-fields .precio-input {
-    width: 85%;
-    border-radius: 11px;
-}
-
-.form-fields .categoria-input {
-    width: 97%;
+.form-fields .email-input {
+    width: 90%;
     border-radius: 10px;
 }
 
-.form-fields .proveedor-input {
-    width: 97%;
+
+.form-fields .phone-number-input {
+    width: 90%;
     border-radius: 10px;
 }
 
@@ -157,13 +167,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.right-side .descripcion-input {
-    width: 98%;
-    height: 100px;
-    border-radius: 10px;
-    border: 1px solid #b30000;
 }
 
 .product-form select.input {
@@ -192,7 +195,7 @@
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%;
+    width: 150px;
     text-align: center;
     height: 40px;
 }

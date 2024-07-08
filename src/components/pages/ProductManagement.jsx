@@ -44,7 +44,7 @@ const ProductManagement = ({ toggleMenu }) => {
                         <i className="fas fa-bars"></i>
                     </button>
                     <div className="header-line">
-                        <Logo />
+                        <Logo/>
                     </div>
                 </div>
                 <div className="navbar-center">
