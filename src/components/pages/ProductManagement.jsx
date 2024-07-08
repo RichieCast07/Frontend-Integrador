@@ -6,6 +6,7 @@ import Button from '../atoms/Button';
 import Input from '../atoms/Input';
 import ImageUpload from '../atoms/ImageUpload';
 
+
 const ProductManagement = ({ toggleMenu }) => {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
@@ -154,47 +155,45 @@ const ProductManagement = ({ toggleMenu }) => {
                 </div>
             </div>
             <Modal isOpen={isModalOpen} onClose={handleModalToggle}>
-                <div className="modal-header">
-                    <button className="close-btn" onClick={handleModalToggle}>
-                        <i className="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-                <div className="product-form-container">
-                    <ImageUpload />
-                    <form className="product-form">
-                        <div className="form-fields">
-                            <label>Nombre</label>
-                            <Input type="text" className="input nombre-input" />
-                            <div className="form-fields-row">
-                                <div className="input-container">
-                                    <label>Cantidad</label>
-                                    <Input type="number" className="input cantidad-input" />
+                    <div className="modal-body">
+                        <div className="product-form-container">
+                            <ImageUpload />
+                            <div className="left-side">
+                                <div className="form-fields">
+                                    <label className="label-name">Nombre</label>
+                                    <Input type="text" className="input nombre-input" />
+                                    <div className="form-fields-row">
+                                        <div className="input-container">
+                                            <label>Cantidad</label>
+                                            <Input type="number" className="input cantidad-input" />
+                                        </div>
+                                        <div className="input-container">
+                                            <label>Precio</label>
+                                            <Input type="number" className="input precio-input" />
+                                        </div>
+                                    </div>
+                                    <div className="input-container">
+                                        <select className="input categoria-input">
+                                            <option value="" disabled selected hidden>Categoría</option>
+                                            <option value="cat1">Categoría 1</option>
+                                            <option value="cat2">Categoría 2</option>
+                                        </select>
+                                    </div>
+                                    <div className="input-container">
+                                        <select className="input proveedor-input">
+                                            <option value="" disabled selected hidden>Proveedor</option>
+                                            <option value="prov1">Proveedor 1</option>
+                                            <option value="prov2">Proveedor 2</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div className="input-container">
-                                    <label>Precio</label>
-                                    <Input type="number" className="input precio-input" />
-                                </div>
-                            </div>
-                            <div className="input-container">
-                                <select className="input categoria-input">
-                                    <option value="" disabled selected hidden>Categoría</option>
-                                    <option value="cat1">Categoría 1</option>
-                                    <option value="cat2">Categoría 2</option>
-                                </select>
-                            </div>
-                            <div className="input-container">
-                                <select className="input proveedor-input">
-                                    <option value="" disabled selected hidden>Proveedor</option>
-                                    <option value="prov1">Proveedor 1</option>
-                                    <option value="prov2">Proveedor 2</option>
-                                </select>
                             </div>
                         </div>
-                        <label>Descripción</label>
-                        <textarea className="input descripcion-input" placeholder="Escribe una pequeña descripción..."></textarea>
-                        <Button className="submit-btn">Agregar</Button>
-                    </form>
-                </div>
+                        <div className="right-side">
+                            <textarea className="input descripcion-input" placeholder="Escribe una pequeña descripción..."></textarea>
+                            <Button className="submit-btn-add">Agregar</Button>
+                        </div>
+                    </div>
             </Modal>
         </div>
     );

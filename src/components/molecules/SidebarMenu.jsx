@@ -11,7 +11,7 @@ const SidebarMenu = ({ isOpen, toggleMenu }) => {
                     <div className="logo-container">
                         <Logo />
                     </div>
-                    <button className="close-btn" onClick={toggleMenu}>
+                    <button className="close-btn-bar" onClick={toggleMenu}>
                         <i className="fas fa-times"></i>
                     </button>
                 </div>
