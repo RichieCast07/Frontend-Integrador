@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/ModalSuppliers.css';
 
-const Modal = ({ isOpen, onClose, children }) => {
+const ModalSuppliers = ({ isOpen, onClose, children }) => {
     if (!isOpen) return null;
 
     return (
@@ -21,4 +21,4 @@ const Modal = ({ isOpen, onClose, children }) => {
     );
 };
 
-export default Modal;
+export default ModalSuppliers;

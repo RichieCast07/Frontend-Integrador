@@ -1,3 +1,4 @@
+/* ModalProductManagement.css */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -15,7 +16,7 @@
     background: white;
     padding: 10px;
     border-radius: 20px;
-    height: 550px;
+    height: 850px;
     width: 700px;
     max-width: 100%;
 }
@@ -85,11 +86,6 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-}
-
-.form-fields {
-    display: flex;
-    flex-direction: column;
     gap: 10px;
 }
 
@@ -106,16 +102,9 @@
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    margin-right: 57%;
 }
 
 .label-name {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
     margin-left: 2%;
 }
 
@@ -128,28 +117,11 @@
     position: relative;
 }
 
-.form-fields .nombre-input {
-    margin-left: 5px;
-    width: 94%;
-    border-radius: 10px;
-}
-
-.form-fields .cantidad-input {
-    width: 85%;
-    border-radius: 10px;
-}
-.form-fields .precio-input {
-    width: 85%;
-    border-radius: 11px;
-}
-
-.form-fields .categoria-input {
-    width: 97%;
-    border-radius: 10px;
-}
-
+.form-fields .nombre-input,
+.form-fields .cantidad-input,
+.form-fields .precio-input,
+.form-fields .categoria-input,
 .form-fields .proveedor-input {
-    width: 97%;
     border-radius: 10px;
 }
 
@@ -186,7 +158,7 @@
 
 .submit-btn-add {
     background: #b30000;
-    color: rgb(255, 255, 255);
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;

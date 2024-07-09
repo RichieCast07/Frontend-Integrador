@@ -6,18 +6,18 @@ import Button from '../atoms/Button';
 import Input from '../atoms/Input';
 
 
-const ProductManagement = ({ toggleMenu }) => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+const ManageSuppliers = ({ toggleSuppliersMenu }) => {
+    const [isModalSuppliersOpen, setIsModalSuppliersOpen] = useState(false);
 
-    const handleModalToggle = () => {
-        setIsModalOpen(!isModalOpen);
+    const handleModalSuppliersToggle = () => {
+        setIsModalSuppliersOpen(!isModalSuppliersOpen);
     };
 
     return (
         <div className="product-management">
             <header className="navbar">
                 <div className="navbar-left">
-                    <button className="menu-btn" onClick={toggleMenu}>
+                    <button className="menu-btn" onClick={toggleSuppliersMenu}>
                         <i className="fas fa-bars"></i>
                     </button>
                     <div className="header-line">
@@ -36,7 +36,7 @@ const ProductManagement = ({ toggleMenu }) => {
                         <h1>Administrar proveedores</h1>
                     </div>
                     <div className="right-actions">
-                        <i className="fa-solid fa-plus new-product-btn" onClick={handleModalToggle}></i>
+                        <i className="fa-solid fa-plus new-product-btn" onClick={handleModalSuppliersToggle}></i>
                     </div>
                 </div>
                 <div className="product-list-container">
@@ -60,35 +60,38 @@ const ProductManagement = ({ toggleMenu }) => {
                                 </button>
                             </div>
                         </div>
-                        {/* Más productos */}
+                        {/* Más proveedores */}
                     </div>
                 </div>
             </div>
-            <ModalSuppliers isOpen={isModalOpen} onClose={handleModalToggle}>
-                    <div className="modal-body">
-                        <div className="product-form-container">
-                            <div className="left-side">
+            <ModalSuppliers isOpen={isModalSuppliersOpen} onClose={handleModalSuppliersToggle}>
+                <div className="modal-body">
+                    <div className="product-form-container">
+                        <div className="left-side">
                             <div className="form-fields">
-                                    <label className="label-name">Nombre</label>
-                                    <Input type="text" className="input name-input" />
-                                </div>
-                                <div className="form-fields">
-                                    <label className="label-email">Email</label>
-                                    <Input type="text" className="input email-input" />
-                                </div>
-                                <div className="form-fields">
-                                    <label className="label-phone-number">Telefono</label>
-                                    <Input type="text" className="input phone-number-input" />
-                                </div>
+                                <label className="label-name">Nombre</label>
+                                <Input type="text" className="input name-input" />
+                            </div>
+                            <div className="form-fields">
+                                <label className="label-email">Email</label>
+                                <Input type="text" className="input email-input" />
+                            </div>
+                            <div className="form-fields">
+                                <label className="label-phone-number">Teléfono</label>
+                                <Input type="text" className="input phone-number-input" />
                             </div>
                         </div>
-                        <div className="right-side">
-                            <Button className="submit-btn-add">Agregar</Button>
-                        </div>
                     </div>
+                    <div className="right-side">
+                        <Button className="submit-btn-add">Agregar</Button>
+                    </div>
+                </div>
             </ModalSuppliers>
         </div>
     );
 };
 
-export default ProductManagement;
+export default ManageSuppliers;
+
+
+//Aqui ya quedo listo todo no muevas nada, solo lo necesario, tiene sus propios estilos y su modal
