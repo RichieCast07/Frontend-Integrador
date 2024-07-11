@@ -10,13 +10,6 @@ body {
     background-color: #f5f5f5;
 }
 
-/*.header-logo {
-    height: 10px;
-    width: 20px;
-    z-index: 4000;
-    margin-left: 20px;
-}*/
-
 .app-container {
     background-color: #f5f5f5;
     min-height: 100vh;

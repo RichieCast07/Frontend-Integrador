@@ -1,16 +1,33 @@
 import React, { useState } from 'react';
-import '../styles/ManageSuppliers.css';
 import Logo from '../atoms/Logo';
-import ModalSuppliers from '../atoms/ModalSuppliers';
+import ModalSuppliers from '../molecules/ModalSuppliers';
+import ModalEditManageSuppliers from '../molecules/ModalEditManageSuppliers';
 import Button from '../atoms/Button';
 import Input from '../atoms/Input';
-
+import DeleteModal from '../molecules/DeleteModal';
+import '../styles/pages/ManageSuppliers.css';
 
 const ManageSuppliers = ({ toggleSuppliersMenu }) => {
     const [isModalSuppliersOpen, setIsModalSuppliersOpen] = useState(false);
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+    const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
     const handleModalSuppliersToggle = () => {
         setIsModalSuppliersOpen(!isModalSuppliersOpen);
+    };
+
+    const handleEditModalToggle = () => {
+        setIsEditModalOpen(!isEditModalOpen);
+    };
+
+    const handleDeleteModalToggle = () => {
+        setIsDeleteModalOpen(!isDeleteModalOpen);
+    };
+
+    const handleDelete = () => {
+        // Lógica para eliminar el proveedor
+        console.log('Proveedor eliminado');
+        setIsDeleteModalOpen(false);
     };
 
     return (
@@ -20,8 +37,8 @@ const ManageSuppliers = ({ toggleSuppliersMenu }) => {
                     <button className="menu-btn" onClick={toggleSuppliersMenu}>
                         <i className="fas fa-bars"></i>
                     </button>
-                    <div className="header-line">
-                        <Logo />
+                    <div className="header-logo">
+                        <Logo className="logo-suppliers"/>
                     </div>
                 </div>
                 <div className="navbar-right">
@@ -52,10 +69,10 @@ const ManageSuppliers = ({ toggleSuppliersMenu }) => {
                                 <p>Proveedor</p>
                             </div>
                             <div className="product-actions">
-                                <button className="add-pencil-btn">
+                                <button className="add-pencil-btn" onClick={handleEditModalToggle}>
                                     <i className="fa-solid fa-pencil"></i>
                                 </button>
-                                <button className="delete-btn">
+                                <button className="delete-btn" onClick={handleDeleteModalToggle}>
                                     <i className="fas fa-trash"></i>
                                 </button>
                             </div>
@@ -87,11 +104,10 @@ const ManageSuppliers = ({ toggleSuppliersMenu }) => {
                     </div>
                 </div>
             </ModalSuppliers>
+            <ModalEditManageSuppliers isOpen={isEditModalOpen} onClose={handleEditModalToggle} />
+            <DeleteModal isOpen={isDeleteModalOpen} onRequestClose={handleDeleteModalToggle} onDelete={handleDelete} />
         </div>
     );
 };
 
 export default ManageSuppliers;
-
-
-//Aqui ya quedo listo todo no muevas nada, solo lo necesario, tiene sus propios estilos y su modal

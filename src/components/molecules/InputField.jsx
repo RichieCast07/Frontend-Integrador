@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../atoms/Icon';
-import '../styles/styles.css';
+import '../styles/organisms/styles.css';
 
 const InputField = ({ type, placeholder, iconName }) => {
     return (

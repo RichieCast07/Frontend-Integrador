@@ -6,7 +6,7 @@ import ProductManagement from './components/pages/ProductManagement';
 import SidebarMenu from './components/molecules/SidebarMenu';
 import Navbar from './components/organisms/Navbar';
 import ManageSuppliers from './components/pages/ManageSuppliers';
-import './components/styles/styles.css';
+import './components/styles/organisms/styles.css'
 
 const App = () => {
     return (

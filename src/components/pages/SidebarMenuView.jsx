@@ -1,15 +1,13 @@
 import React from 'react';
-import SidebarMenu from '../molecules/SidebarMenu';
-import '../styles/SidebarMenu.css';
+import Logo from '../components/Logo';
+import '../styles/organisms/SidebarMenu.css';
 
 const SidebarMenu = ({ isOpen, toggleMenu }) => {
     return (
         <div className={`sidebar-container ${isOpen ? 'open' : ''}`}>
             <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-            <div className="logo-line">
-                        <Logo />
-                    </div>
                 <div className="profile-section">
+                    <Logo className="logo-sidebar" />
                     <button className="close-btn" onClick={toggleMenu}>
                         <i className="fas fa-times"></i>
                     </button>
