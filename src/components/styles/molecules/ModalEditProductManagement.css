@@ -1,4 +1,5 @@
-.modal-product-management-overlay {
+/* ModalEditProductManagement.css */
+.modal-edit-product-management-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,7 +12,7 @@
     z-index: 1000;
 }
 
-.modal-product-management-container {
+.modal-edit-product-management-container {
     background: white;
     padding: 40px;
     border-radius: 15px;
@@ -23,51 +24,51 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.modal-product-management-header {
+.modal-edit-product-management-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.modal-product-management-header h2 {
+.modal-edit-product-management-header h2 {
     margin: 0;
     font-size: 30px;
     text-align: center;
     letter-spacing: 1px;
-    margin-left: 180px;
+    margin-left: 250px;
 }
 
-.modal-product-management-close-btn {
+.modal-edit-product-management-close-btn {
     background: none;
     border: none;
     cursor: pointer;
 }
 
-.modal-product-management-close-btn i {
+.modal-edit-product-management-close-btn i {
     color: #b30000;
     font-size: 35px;
 }
 
-.modal-product-management-body {
+.modal-edit-product-management-body {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.modal-product-management-form-container {
+.modal-edit-product-management-form-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.modal-product-management-upper {
+.modal-edit-product-management-upper {
     display: flex;
     gap: 20px;
 }
 
-.modal-product-management-image-upload {
+.modal-edit-product-management-image-upload {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,7 +79,7 @@
     margin-top: 50px;
 }
 
-.modal-product-management-image-placeholder {
+.modal-edit-product-management-image-placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,61 +87,55 @@
     height: 80%;
 }
 
-.modal-product-management-image-placeholder i {
+.modal-edit-product-management-image-placeholder i {
     font-size: 70px;
     color: #b30000;
 }
 
-.modal-product-management-form-fields {
+.modal-edit-product-management-form-fields {
     display: flex;
     flex-direction: column;
     flex: 1;
     gap: 10px;
 }
 
-.modal-product-management-form-fields-row {
+.modal-edit-product-management-form-fields-row {
     display: flex;
     gap: 20px;
 }
 
-.modal-product-management-input-container {
+.modal-edit-product-management-cantidad-input,
+.modal-edit-product-management-precio-input {
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+}
+
+.modal-edit-product-management-input-container {
     flex: 1;
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.modal-product-management-label-name {
+.modal-edit-product-management-label {
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-.modal-product-management-input {
+.modal-edit-product-management-input {
     width: 100%;
     padding: 10px;
     border: 1px solid #b30000;
     border-radius: 10px;
 }
 
-.modal-product-management-nombre-input {
-    width: 95%;
-    display: block;
-    margin: 0 auto;
-}
-
-.modal-product-management-cantidad-input,
-.modal-product-management-precio-input {
-    width: 89%;
-    display: block;
-    margin: 0 auto;
-}
-
-.modal-product-management-select-container {
+.modal-edit-product-management-select-container {
     display: flex;
     align-items: center;
 }
 
-.modal-product-management-select-icon {
+.modal-edit-product-management-select-icon {
     background: none;
     border: none;
     position: absolute;
@@ -150,7 +145,7 @@
     color: #b30000;
 }
 
-.modal-product-management-dropdown {
+.modal-edit-product-management-dropdown {
     position: absolute;
     top: 100%;
     left: 0;
@@ -165,29 +160,25 @@
     margin: 0;
 }
 
-.modal-product-management-dropdown li {
+.modal-edit-product-management-dropdown li {
     padding: 10px;
     cursor: pointer;
 }
 
-.modal-product-management-dropdown li:hover {
+.modal-edit-product-management-dropdown li:hover {
     background: #f0f0f0;
 }
 
-.modal-product-management-descripcion-input {
-    width: 95%;
+.modal-edit-product-management-description-input {
+    width: 100%;
     height: 100px;
-    padding: 10px 20px;
+    padding: 10px;
     border: 1px solid #b30000;
-    border-radius: 15px;
-    cursor: pointer;
+    border-radius: 10px;
     resize: none;
-    display: block;
-    margin: 0 auto;
-    margin-left: -8px;
 }
 
-.modal-product-management-submit-btn-add {
+.modal-edit-product-management-submit-btn {
     background: #b30000;
     color: white;
     border: none;
@@ -196,10 +187,6 @@
     cursor: pointer;
     font-size: 16px;
     width: 100%;
-    height: 50px;
     text-align: center;
     margin-top: 10px;
-    font-family: 'Thin', sans-serif;
-    font-weight: 100;
-    letter-spacing: 1px;
 }

@@ -25,7 +25,7 @@ const ManageSuppliers = ({ toggleSuppliersMenu }) => {
     };
 
     const handleDelete = () => {
-        // Lógica para eliminar el proveedor
+        // Logica para eliminar el proveedor
         console.log('Proveedor eliminado');
         setIsDeleteModalOpen(false);
     };

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Logo from '../atoms/Logo';
 import ModalProductManagement from '../molecules/ModalProductManagement';
+import ModalEditProductManagement from '../molecules/ModalEditProductManagement';
+import ModalDeleteProductManagement from '../molecules/ModalDeleteProductManagement';
 import Button from '../atoms/Button';
 import Input from '../atoms/Input';
 import ImageUpload from '../atoms/ImageUpload';
 import '../styles/pages/ProductManagement.css';
-
 
 const ProductManagement = ({ toggleMenu }) => {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -13,6 +14,8 @@ const ProductManagement = ({ toggleMenu }) => {
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(100);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+    const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
     const toggleFilterMenu = () => {
         setIsFilterOpen(!isFilterOpen);
@@ -34,6 +37,19 @@ const ProductManagement = ({ toggleMenu }) => {
 
     const handleModalToggle = () => {
         setIsModalOpen(!isModalOpen);
+    };
+
+    const handleEditModalToggle = () => {
+        setIsEditModalOpen(!isEditModalOpen);
+    };
+
+    const handleDeleteModalToggle = () => {
+        setIsDeleteModalOpen(!isDeleteModalOpen);
+    };
+
+    const handleDelete = () => {
+        // Lógica para eliminar el producto
+        handleDeleteModalToggle();
     };
 
     return (
@@ -142,10 +158,10 @@ const ProductManagement = ({ toggleMenu }) => {
                                 <p>Proveedor</p>
                             </div>
                             <div className="product-actions">
-                                <button className="add-pencil-btn">
+                                <button className="add-pencil-btn" onClick={handleEditModalToggle}>
                                     <i className="fa-solid fa-pencil"></i>
                                 </button>
-                                <button className="delete-btn">
+                                <button className="delete-btn" onClick={handleDeleteModalToggle}>
                                     <i className="fas fa-trash"></i>
                                 </button>
                             </div>
@@ -154,7 +170,9 @@ const ProductManagement = ({ toggleMenu }) => {
                     </div>
                 </div>
             </div>
-                <ModalProductManagement isOpen={isModalOpen} onClose={handleModalToggle} />
+            <ModalProductManagement isOpen={isModalOpen} onClose={handleModalToggle} />
+            <ModalEditProductManagement isOpen={isEditModalOpen} onClose={handleEditModalToggle} />
+            <ModalDeleteProductManagement isOpen={isDeleteModalOpen} onClose={handleDeleteModalToggle} onDelete={handleDelete} />
         </div>
     );
 };

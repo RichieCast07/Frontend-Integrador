@@ -34,9 +34,8 @@
     margin: 0;
     font-size: 30px;
     text-align: center;
-    margin-left: 40%;
     letter-spacing: 1px;
-    margin-top: -15px;
+    margin-left: 250px;
 }
 
 .modal-edit-manage-suppliers-close-btn {
@@ -48,8 +47,6 @@
 .modal-edit-manage-suppliers-close-btn i {
     color: #b30000;
     font-size: 35px;
-    margin-right: 5px;
-    margin-top: -12px;
 }
 
 .modal-edit-manage-suppliers-body {
@@ -123,8 +120,6 @@
     padding: 10px;
     border: 1px solid #b30000;
     border-radius: 10px;
-    display: block;
-    margin: 0 auto;
 }
 
 .modal-edit-manage-suppliers-nombre-input {
