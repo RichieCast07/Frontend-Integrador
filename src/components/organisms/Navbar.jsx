@@ -5,7 +5,7 @@ import '../styles/organisms/Navbar.css';
 const Navbar = () => {
     return (
         <header className="header-line">
-            <Logo />
+            <Logo className={"Logo"}/>
         </header>
     );
 };

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import InputField from '../molecules/InputField';
 import Button from '../atoms/Button';
 import FormContainer from '../templates/FormContainer';
+import Navbar from './Navbar';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../styles/organisms/styles.css';
 
@@ -22,6 +23,7 @@ const LoginForm = () => {
 
     return (
         <div className="app-container">
+                <Navbar />
             <FormContainer icon="user">
                 <form onSubmit={handleLogin} className="form">
                     <label className="input-label" htmlFor="username">Usuario</label>

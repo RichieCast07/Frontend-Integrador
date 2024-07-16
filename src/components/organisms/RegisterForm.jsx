@@ -3,6 +3,7 @@ import InputField from '../molecules/InputField';
 import Button from '../atoms/Button';
 import FormContainer from '../templates/FormContainer';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Navbar from './Navbar';
 import '../styles/organisms/styles.css'
 
 const RegisterForm = () => {
@@ -23,6 +24,7 @@ const RegisterForm = () => {
 
     return (
         <div className="app-container">
+                <Navbar />
             <div className="register-form-container">
                 <FormContainer>
                     <div className="form-header">

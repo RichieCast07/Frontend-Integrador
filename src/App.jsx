@@ -4,9 +4,9 @@ import LoginForm from './components/organisms/LoginForm';
 import RegisterForm from './components/organisms/RegisterForm';
 import ProductManagement from './components/pages/ProductManagement';
 import SidebarMenu from './components/molecules/SidebarMenu';
-import Navbar from './components/organisms/Navbar';
 import ManageSuppliers from './components/pages/ManageSuppliers';
 import './components/styles/organisms/styles.css'
+import ManageCategories from './components/pages/ManageCategories';
 
 const App = () => {
     return (
@@ -28,7 +28,6 @@ const AppContent = () => {
 
     return (
         <div className="app-container">
-            <Navbar />
             {!isAuthRoute && (
                 <>
                     <SidebarMenu isOpen={isOpen} toggleMenu={toggleMenu} />
@@ -45,6 +44,7 @@ const AppContent = () => {
                 <Route path="/login" element={<LoginForm />} />
                 <Route path="/products" element={<ProductManagement toggleMenu={toggleMenu} />} />
                 <Route path="/suppliers" element={<ManageSuppliers />} />
+                <Route path="/categories" element={<ManageCategories />} />
             </Routes>
         </div>
     );
